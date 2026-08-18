@@ -1,0 +1,110 @@
+@media(max-width:1200px) {
+    .first-section {
+        flex-direction: column;
+    }
+
+    .first-section .info {
+        margin-top: 20px;
+        text-align: center;
+        order: 1;
+        max-height: 70%;
+        margin-right: 0;
+        /* background-color: red; */
+    }
+
+    .first-section .image{
+        max-width: 10rem;
+        width: 100%;
+        height: 30%;
+        /* background-color: blue; */
+    }
+    .first-section .image img{
+        width: 15rem;
+    };
+}
+/* 900px */
+@media(max-width:900px) {
+    .header .logo {
+        font-size: 1.8rem;
+    }
+
+    .header .hamburger {
+        background: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 129));
+    }
+
+    .header .hamburger:before,
+    .header .hamburger:after {
+        /* background-color: #ffffff; */
+        background: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 129));
+    }
+
+    .first-section .info {
+        margin-top: 20px;
+        text-align: center;
+        order: 1;
+        max-height: 70%;
+        margin-right: 0;
+        /* background-color: red; */
+    }
+    .first-section .info h2{
+        font-size: 3.5rem;
+    }
+    .first-section .info p{
+        font-size: 1.8rem;
+    }
+
+}
+/* 768px */
+@media(max-width:768px){
+    .first-section .info h2{
+        font-size: 2.5rem;
+    }
+    .first-section .info p{
+        font-size: 1.8rem;
+    }
+    .first-section .image img{
+        width: 12rem;
+    }
+
+}
+
+/* 576px */
+@media(max-width: 576px) {
+    .first-section .info h2{
+        font-size: 2rem;
+    }
+    .first-section .info p{
+        font-size: 1.6rem;
+    }
+    .first-section .image img{
+        width: 10rem;
+    }
+    .first-section .image{
+        max-width: 10rem;
+        width: 100%;
+        height: 20%;
+        /* background-color: blue; */
+    }
+
+}
+
+@media (max-width: 460px){
+    .first-section .info h2{
+        font-size: 1.8rem;
+    }
+    .first-section .info p{
+        font-size: 1.8rem;
+    }
+}
+
+/* 375px */
+@media(max-width: 376px) { 
+    
+    .first-section .info h2{
+        font-size: 1.8rem;
+    }
+    .first-section .info p{
+        font-size: 1.4rem;
+    }
+
+ }

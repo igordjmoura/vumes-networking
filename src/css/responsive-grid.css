@@ -1,0 +1,154 @@
+@media(max-width: 1200px) {
+    .home {
+        grid-template-columns: 1fr;
+    }
+
+    .home .info {
+        text-align: center;
+    }
+
+    .home .info h2 {
+        text-align: center;
+    }
+
+   
+
+    .home .image img {
+        max-width: 250px;
+    }
+
+    .services .service-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .service .service-info {
+        margin-bottom: 1rem;
+    }
+
+    .about .about-container {
+        flex-direction: column;
+    }
+
+    .about .about-info {
+        text-align: center;
+    }
+}
+
+@media(max-width: 900px) {
+    .header .logo h1 {
+        font-size: 3.5rem;
+    }
+
+    .header .hamburger {
+        background: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 129));
+    }
+
+    .header .hamburger:before,
+    .header .hamburger:after {
+        /* background-color: #ffffff; */
+        background: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 129));
+    }
+
+    .home .info {
+        text-align: center;
+    }
+
+    .home .info h2 {
+        font-size: 3.5rem;
+    }
+
+    .home .info p {
+        font-size: 1.8rem;
+    }
+
+    .services .service-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, minmax(300px, 400px));
+    }
+
+    .services .service-container .service-info p {
+        font-size: 1.8rem;
+    }
+
+    .about .about-container {
+        grid-template-columns: 1fr;
+    }
+
+
+
+
+    @media(max-width: 768px) {
+        
+        .services .service-container {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, minmax(300px, 400px));
+        }
+
+        .service .service-info {
+            margin-bottom: 1rem;
+        }
+
+        .service .service-image i {
+            font-size: 10rem;
+
+        }
+
+        .benefits .container-benefits {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    @media(max-width: 576px) {
+        .home .info h2 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .home .info p {
+            font-size: 2rem;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .services .service-title h2 {
+            font-size: 2rem;
+        }
+
+
+    }
+
+    @media(max-width: 376px) {
+        .home .info h2 {
+            font-size: 2rem;
+        }
+
+        .home .info p {
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        .service .service-image {
+            /* background-color: red; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .service-container .service .service-info {
+            /* background-color: blue; */
+            width: 100%;
+            min-height: auto;
+            /* margin-bottom: 2rem; */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .benefits .container-benefits .benefit .benefit-info h2{
+            font-size: 2rem;
+        }
+    }
+}
