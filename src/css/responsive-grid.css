@@ -41,6 +41,18 @@
     .contact .cta-action {
         width: min(38rem, 100%);
     }
+
+    .contact-process {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-step:nth-child(2) {
+        border-right: 0;
+    }
+
+    .process-step:nth-child(-n + 2) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
 }
 
 @media(max-width: 900px) {
@@ -127,6 +139,22 @@
 
         .contact .cta-action {
             min-width: 0;
+        }
+
+        .contact-process {
+            grid-template-columns: 1fr;
+            border-radius: 2rem 2rem 0 2rem;
+        }
+
+        .process-step,
+        .process-step:nth-child(2) {
+            min-height: auto;
+            border-right: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .process-step:last-child {
+            border-bottom: 0;
         }
 
         .home .info h2 {

@@ -266,6 +266,7 @@ main {
 }
 
 .benefits .container-benefits .benefit {
+    position: relative;
     display: flex;
     justify-content: space-between;
     /* Distribui o espaço igualmente entre eles */
@@ -279,8 +280,27 @@ main {
     margin: 0 auto;
     /* Centraliza o container na tela */
     /* padding: 20px; */
-    border-radius: var(--main-border);
+    /* border-radius: var(--main-border); */
     border-bottom: 3px solid rgb(255, 255, 255, .1);
+}
+
+.benefits .container-benefits .benefit::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    height: 3px;
+    background: var(--main-degrade);
+    border-radius: 0 0 0 2rem;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.benefits .container-benefits .benefit:hover::after,
+.benefits .container-benefits .benefit:focus-within::after {
+    transform: scaleX(1);
 }
 
 
@@ -466,15 +486,17 @@ main {
     grid-area: contact;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(120deg, rgb(13, 13, 13) 0%, rgb(32, 48, 61) 58%, rgb(59, 128, 255) 100%);
+    /* background: linear-gradient(120deg, rgb(13, 13, 13) 0%, rgb(32, 48, 61) 58%, rgb(59, 128, 255) 100%); */
+    background: var(--services-background);
     color: #ffffff;
-    padding: 7rem 2rem;
+     padding:  2rem 5rem;
 }
 
 .contact .contact-container {
     width: min(112rem, 100%);
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
@@ -487,7 +509,7 @@ main {
 .contact .cta-eyebrow,
 .contact .cta-action-label {
     color: #7ef1c9;
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     font-weight: 700;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -502,21 +524,19 @@ main {
 
 .contact .cta-copy h2 span {
     display: block;
-    color: #7ef1c9;
+   background-image: var(--text-degrade);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .contact .cta-description {
-    max-width: 57rem;
     margin-top: 2rem;
     color: rgba(255, 255, 255, 0.82);
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     line-height: 1.5;
 }
 
-.contact .cta-action {
-    flex: 0 1 38rem;
-    min-width: 30rem;
-}
 
 .contact .cta-item {
     width: 100%;
@@ -569,6 +589,77 @@ main {
     color: rgba(255, 255, 255, 0.65);
     font-size: 1.4rem;
     text-align: center;
+}
+
+.contact-process {
+    width: min(140rem, 100%);
+    margin: 6rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3rem 3rem 0 3rem;
+    overflow: hidden;
+    background: rgba(13, 13, 13, 0.35);
+}
+
+.process-step {
+    position: relative;
+    min-height: 31rem;
+    padding: 4rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.process-step:last-child {
+    border-right: 0;
+}
+
+.process-step::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 0.4rem;
+    background: var(--main-degrade);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.process-step:hover,
+.process-step:focus-within {
+    background: rgba(59, 128, 255, 0.034);
+}
+
+.process-step:hover::after,
+.process-step:focus-within::after {
+    transform: scaleX(1);
+}
+
+.process-number {
+    display: flex;
+    width: 5.4rem;
+    height: 5.4rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    color: var(--main-degrade);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.process-step h3 {
+    margin-top: 6rem;
+    font-size: 2.5rem;
+}
+
+.process-step p {
+    margin-top: 1.6rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.8rem;
+    line-height: 1.55;
 }
 
 .footer {
