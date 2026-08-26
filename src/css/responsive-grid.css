@@ -42,7 +42,7 @@
         width: min(38rem, 100%);
     }
 
-    .contact-process {
+    .process-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -141,7 +141,19 @@
             min-width: 0;
         }
 
-        .contact-process {
+        .process {
+            padding: 5rem 1.8rem;
+        }
+
+        .process-title h2 {
+            font-size: 2.8rem;
+        }
+
+        .process-description {
+            font-size: 1.7rem;
+        }
+
+        .process-container {
             grid-template-columns: 1fr;
             border-radius: 2rem 2rem 0 2rem;
         }

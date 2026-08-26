@@ -21,6 +21,7 @@ main {
         "hero hero hero hero"
         "services services services services"
         "projects projects projects projects"
+        "process process process process"
         "contact contact contact contact"
         "about about about about";
 }
@@ -357,6 +358,40 @@ main {
 }
 
 
+.process {
+    grid-area: process;
+    padding: 7rem 5rem;
+    color: white;
+    background: var(--services-background);
+}
+
+.process-title {
+    max-width: 72rem;
+    margin: 0 auto 5rem;
+    text-align: center;
+}
+
+.process-eyebrow {
+    color: #7ef1c9;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.process-title h2 {
+    margin-top: 1rem;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+}
+
+.process-description {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
 .projects {
     grid-area: projects;
     /* background: linear-gradient(to right, rgba(71, 194, 251, 0.715), rgba(57, 14, 251, 0.879)); */
@@ -487,7 +522,7 @@ main {
     position: relative;
     overflow: hidden;
     /* background: linear-gradient(120deg, rgb(13, 13, 13) 0%, rgb(32, 48, 61) 58%, rgb(59, 128, 255) 100%); */
-    background: var(--services-background);
+    background: var(--projects-background);
     color: #ffffff;
      padding:  2rem 5rem;
 }
@@ -524,7 +559,7 @@ main {
 
 .contact .cta-copy h2 span {
     display: block;
-   background-image: var(--text-degrade);
+   background-image: var(--main-degrade);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -591,9 +626,9 @@ main {
     text-align: center;
 }
 
-.contact-process {
+.process-container {
     width: min(140rem, 100%);
-    margin: 6rem auto 0;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     border: 1px solid rgba(255, 255, 255, 0.2);
