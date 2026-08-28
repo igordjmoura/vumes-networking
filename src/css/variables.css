@@ -10,5 +10,6 @@
     --contact-background: linear-gradient(to left, rgb(13, 13, 13), rgb(65, 65, 65));
     --main-degrade: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 200));
     --text-degrade: linear-gradient(to left, rgb(100, 150, 244), rgb(126, 239, 207));
+    --text-degrade-h2: linear-gradient(to right, rgb(100, 150, 244), rgb(126, 239, 207));
 
  }

@@ -20,8 +20,8 @@ main {
     grid-template-areas:
         "hero hero hero hero"
         "services services services services"
-        "projects projects projects projects"
         "process process process process"
+        "projects projects projects projects"
         "contact contact contact contact"
         "about about about about";
 }
@@ -417,7 +417,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding:  2rem 5rem;
+    padding: 2rem 5rem;
     gap: 2rem;
     font-size: 1.6rem;
 }
@@ -524,7 +524,7 @@ main {
     /* background: linear-gradient(120deg, rgb(13, 13, 13) 0%, rgb(32, 48, 61) 58%, rgb(59, 128, 255) 100%); */
     background: var(--projects-background);
     color: #ffffff;
-     padding:  2rem 5rem;
+    padding: 2rem 5rem;
 }
 
 .contact .contact-container {
@@ -558,8 +558,7 @@ main {
 }
 
 .contact .cta-copy h2 span {
-    display: block;
-   background-image: var(--main-degrade);
+    background-image: var(--main-degrade);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
