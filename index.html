@@ -19,7 +19,9 @@
     <header class="header">
 
         <div class="logo">
-            <img src="./src/images/vumes-header-logo.svg" alt="Vumes Networking">
+            <a href="#home" aria-label="Ir para o início">
+                <img src="./src/images/vumes-header-logo.svg" alt="Vumes Networking">
+            </a>
         </div>
 
         <nav>
@@ -31,18 +33,18 @@
                 </div>
             </label>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <!-- <li><a href="#processo">Processo</a></li> -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#processo">Processo</a></li>
                 <li><a href="#contato">Contato</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="#sobre">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="home">
+        <section class="home" id="home">
 
             <div class="image">
                 <img src="./src/images/vumes-degrade.svg" alt="Vumes Networking">
@@ -62,7 +64,7 @@
             </div>
         </section>
 
-        <section class="services">
+        <section class="services" id="servicos">
 
             <div class="service-title">
                 <h2>serviços</h2>
@@ -89,7 +91,7 @@
                             oportunidades de vendas.</p>
                     </div>
 
-                    <a class="btn" href="#">solicite agora</a>
+                    <a class="btn" href="#contato">solicite agora</a>
 
                 </div>
 
@@ -108,7 +110,7 @@
                         </p>
                     </div>
 
-                    <a class="btn" href="#">solicite agora</a>
+                    <a class="btn" href="#contato">solicite agora</a>
 
                 </div>
 
@@ -126,7 +128,7 @@
                         </p>
                     </div>
 
-                    <a class="btn" href="#">fale conosco</a>
+                    <a class="btn" href="#contato">fale conosco</a>
                 </div>
 
             </div>
@@ -186,7 +188,7 @@
 
 
 
-        <section class="projects">
+        <section class="projects" id="portfolio">
 
             <div class="projects-title">
                 <h2>Portfolio</h2>
@@ -269,7 +271,7 @@
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="sobre">
             <div class="about-title">
                 <h2>Sobre Nós</h2>
             </div>
@@ -340,7 +342,7 @@
 
                 <div class="cta-action">
                     <span class="cta-action-label">Fale conosco</span>
-                    <a class="whatsapp cta-item" href="#" aria-label="Enviar uma mensagem no WhatsApp">
+                    <a class="whatsapp cta-item" href="https://wa.me/551196617572" target="_blank" rel="noopener noreferrer" aria-label="Enviar uma mensagem no WhatsApp">
                         <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         <span>Enviar mensagem</span>
                         <i class="fas fa-arrow-right" aria-hidden="true"></i>
@@ -352,7 +354,7 @@
 
         </section>
     </main>
-    <a class="whatsapp-float" href="https://wa.me/" target="_blank" rel="noopener noreferrer"
+    <a class="whatsapp-float" href="https://wa.me/551196617572" target="_blank" rel="noopener noreferrer"
         aria-label="Enviar uma mensagem no WhatsApp">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
@@ -373,7 +375,7 @@
                         aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"
                         aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
+                    <a href="https://wa.me/551196617572" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i
                             class="fab fa-whatsapp"></i></a>
                     <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
                             class="fab fa-github"></i></a>
@@ -386,7 +388,7 @@
         </div>
     </footer>
 
-    <script src="index.js"></script>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>
