@@ -325,6 +325,11 @@
         padding: 0 var(--section-inline-padding) 3rem;
     }
 
+    .about,
+    .about .about-title {
+        background: linear-gradient(135deg, rgb(13, 13, 13), rgb(65, 65, 65));
+    }
+
     .about .about-info {
         width: 100%;
         padding: 1rem 0 2rem;
