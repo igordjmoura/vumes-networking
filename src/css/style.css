@@ -819,7 +819,7 @@ main {
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 50%;
+    border-radius: var(--main-border);
     background: linear-gradient(135deg, #25d366, #16a85b);
     color: white;
     box-shadow: 0 1.2rem 3rem rgba(22, 168, 91, 0.38);
