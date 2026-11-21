@@ -1,49 +1,44 @@
-@media(max-width: 1200px) {
-    .home {
-        grid-template-columns: 1fr;
+@media (max-width: 1200px) {
+    :root {
+        --section-inline-padding: 3.5rem;
     }
 
-    .home .info {
-        text-align: center;
+    .home {
+        grid-template-columns: 1fr 1fr;
+        min-height: auto;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
     .home .info h2 {
-        text-align: center;
+        font-size: 4rem;
     }
 
-   
+    .home .info p {
+        font-size: 2.1rem;
+    }
 
     .home .image img {
-        max-width: 250px;
+        max-width: 28rem;
     }
 
     .services .service-container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
     }
 
-    .service .service-info {
-        margin-bottom: 1rem;
-    }
-
-    .about .about-container {
-        flex-direction: column;
+    .projects-templates {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto;
     }
 
     .about .about-info {
+        width: 70%;
         text-align: center;
     }
 
-    .contact .contact-container {
-        align-items: flex-start;
-    }
-
-    .contact .cta-action {
-        width: min(38rem, 100%);
-    }
-
     .process-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .process-step:nth-child(2) {
@@ -51,172 +46,361 @@
     }
 
     .process-step:nth-child(-n + 2) {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 3px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact .contact-container {
+        align-items: center;
+    }
+
+    .contact .cta-action {
+        width: min(38rem, 100%);
     }
 }
 
-@media(max-width: 900px) {
-    .header .logo h1 {
-        font-size: 3.5rem;
+@media (max-width: 900px) {
+    :root {
+        --section-inline-padding: 2.4rem;
+        --section-block-padding: 5rem;
     }
 
-    .header .hamburger {
-        background: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 129));
+    .header {
+        min-height: 9.6rem;
+        justify-content: center;
+        padding: 0 var(--section-inline-padding);
     }
 
-    .header .hamburger:before,
-    .header .hamburger:after {
-        /* background-color: #ffffff; */
-        background: linear-gradient(45deg, rgb(59, 128, 255), rgb(62, 255, 129));
+    .header .logo {
+        position: absolute;
+        left: 50%;
+        padding-left: 0;
+        transform: translateX(-50%);
+    }
+
+    .header nav {
+        position: fixed;
+    }
+
+    .home {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 4rem var(--section-inline-padding);
     }
 
     .home .info {
+        align-items: center;
         text-align: center;
+    }
+
+    .home .image {
+        order: 2;
+        padding: 3rem 2rem 1rem;
     }
 
     .home .info h2 {
         font-size: 3.5rem;
+        text-align: center;
     }
 
     .home .info p {
-        font-size: 1.8rem;
+        max-width: 68rem;
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .home .image {
+        order: 2;
+        padding: 3rem 2rem 1rem;
     }
 
     .services .service-container {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4, minmax(300px, 400px));
+        grid-template-rows: auto;
     }
 
-    .services .service-container .service-info p {
+    .service-card {
+        max-width: 64rem;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .benefits .container-benefits {
+        margin-right: var(--section-inline-padding);
+        margin-left: var(--section-inline-padding);
+    }
+
+    .benefits .container-benefits .benefit {
+        flex-direction: column;
+        gap: 1.2rem;
+        padding: 2rem 0;
+    }
+
+    .benefits .container-benefits .benefit .benefit-description {
+        width: 100%;
+        height: auto;
+    }
+
+    .benefits .container-benefits .benefit .benefit-description i {
+        font-size: 6.5rem;
+    }
+
+    .projects-templates {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project img {
+        width: min(30rem, 100%);
+    }
+
+    .about .about-info {
+        width: min(70rem, 100%);
+    }
+
+    .process-title {
+        margin-bottom: 3.5rem;
+    }
+
+    .process-step {
+        min-height: 27rem;
+        padding: 3rem;
+    }
+
+    .process-step h3 {
+        margin-top: 3.5rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-brand {
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --section-inline-padding: 1.8rem;
+        --section-block-padding: 4rem;
+    }
+
+    .header {
+        min-height: 8.6rem;
+    }
+
+    .header nav label {
+        top: 4.3rem;
+    }
+
+    .header .logo {
+        padding-left: 0;
+    }
+
+    .header .logo img {
+        max-width: 12.5rem;
+    }
+
+    .home {
+        padding: 3rem var(--section-inline-padding);
+    }
+
+    .home .info {
+        padding: 1.5rem 0;
+        gap: 1.5rem;
+    }
+
+    .home .info h2 {
+        font-size: 2.5rem;
+    }
+
+    .home .info p {
+        font-size: 1.7rem;
+        letter-spacing: 0.05rem;
+    }
+
+    .home .image {
+        padding: 1.5rem 0;
+    }
+
+    .home .image img {
+        max-width: 21rem;
+    }
+
+    .service-title,
+    .projects .projects-title {
+        padding: 2.5rem 1.8rem;
+    }
+
+    .service-title h2,
+    .projects-title h2,
+    .about .about-title h2 {
+        font-size: 2.4rem;
+    }
+
+    .section-eyebrow {
+        font-size: 1.3rem;
+    }
+
+    .section-description,
+    .process-description {
+        font-size: 1.7rem;
+    }
+
+    .service-container,
+    .projects-templates {
+        grid-template-columns: 1fr;
+        padding-right: var(--section-inline-padding);
+        padding-left: var(--section-inline-padding);
+    }
+
+    .service-card,
+    .project {
+        width: 100%;
+    }
+
+    .service-card h2,
+    .project h3 {
+        font-size: 2.1rem;
+    }
+
+    .service-card p,
+    .project p {
+        font-size: 1.7rem;
+    }
+
+    .benefits .container-benefits {
+        margin: 2rem var(--section-inline-padding);
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .benefits .container-benefits .benefit .benefit-description h2,
+    .benefits .container-benefits .benefit .benefit-info p {
         font-size: 1.8rem;
     }
 
-    .about .about-container {
+    .process {
+        padding: var(--section-block-padding) var(--section-inline-padding);
+    }
+
+    .process-title h2 {
+        font-size: 2.8rem;
+    }
+
+    .process-container {
         grid-template-columns: 1fr;
+        border-radius: var(--main-border);
     }
 
-
-
-
-    @media(max-width: 768px) {
-        
-        .services .service-container {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(4, minmax(300px, 400px));
-        }
-
-        .service .service-info {
-            margin-bottom: 1rem;
-        }
-
-        .service .service-image i {
-            font-size: 10rem;
-
-        }
-
-        .benefits .container-benefits {
-            grid-template-columns: 1fr;
-        }
-
+    .process-step,
+    .process-step:nth-child(2) {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 3px solid rgba(255, 255, 255, 0.1);
     }
 
-    @media(max-width: 576px) {
-        .contact {
-            padding: 5rem 1.8rem;
-        }
-
-        .contact .contact-container {
-            gap: 3rem;
-        }
-
-        .contact .cta-copy h2 {
-            font-size: 3.4rem;
-        }
-
-        .contact .cta-description {
-            font-size: 1.7rem;
-        }
-
-        .contact .cta-action {
-            min-width: 0;
-        }
-
-        .process {
-            padding: 5rem 1.8rem;
-        }
-
-        .process-title h2 {
-            font-size: 2.8rem;
-        }
-
-        .process-description {
-            font-size: 1.7rem;
-        }
-
-        .process-container {
-            grid-template-columns: 1fr;
-            border-radius: 2rem 2rem 0 2rem;
-        }
-
-        .process-step,
-        .process-step:nth-child(2) {
-            min-height: auto;
-            border-right: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .process-step:last-child {
-            border-bottom: 0;
-        }
-
-        .home .info h2 {
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        .home .info p {
-            font-size: 2rem;
-            text-align: center;
-            padding: 0 2rem;
-        }
-
-        .services .service-title h2 {
-            font-size: 2rem;
-        }
-
-
+    .process-step:last-child {
+        border-bottom: 0;
     }
 
-    @media(max-width: 376px) {
-        .home .info h2 {
-            font-size: 2rem;
-        }
+    .process-step {
+        padding: 2.5rem 2rem;
+    }
 
-        .home .info p {
-            font-size: 1.6rem;
-            font-weight: 400;
-        }
+    .process-step h3 {
+        margin-top: 2.5rem;
+        font-size: 2.1rem;
+    }
 
-        .service .service-image {
-            /* background-color: red; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: auto;
-        }
+    .process-step p {
+        font-size: 1.7rem;
+    }
 
-        .service-container .service .service-info {
-            /* background-color: blue; */
-            width: 100%;
-            min-height: auto;
-            /* margin-bottom: 2rem; */
-            display: flex;
-            flex-direction: column;
-        }
+    .about .about-container {
+        padding: 0 var(--section-inline-padding) 3rem;
+    }
 
-        .benefits .container-benefits .benefit .benefit-info h2{
-            font-size: 2rem;
-        }
+    .about .about-info {
+        width: 100%;
+        padding: 1rem 0 2rem;
+        gap: 1rem;
+    }
+
+    .about .about-info p {
+        font-size: 1.7rem;
+        line-height: 1.5;
+    }
+
+    .contact {
+        padding: var(--section-block-padding) var(--section-inline-padding);
+    }
+
+    .contact .contact-container {
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .contact .cta-copy {
+        text-align: center;
+    }
+
+    .contact .cta-copy h2 {
+        font-size: 3.4rem;
+    }
+
+    .contact .cta-description {
+        font-size: 1.7rem;
+    }
+
+    .contact .cta-action {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .footer {
+        padding: 4rem var(--section-inline-padding) 2rem;
+    }
+
+    .footer-brand p {
+        font-size: 1.6rem;
+    }
+
+    .whatsapp-float {
+        right: 1.6rem;
+        bottom: 1.6rem;
+        width: 5.6rem;
+        height: 5.6rem;
+    }
+
+    .whatsapp-float i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 376px) {
+    .home .info h2 {
+        font-size: 2.1rem;
+    }
+
+    .home .info p {
+        font-size: 1.6rem;
+    }
+
+    .process-step {
+        padding: 2.2rem 1.5rem;
+    }
+
+    .contact .cta-copy h2 {
+        font-size: 3rem;
+    }
+
+    .contact .cta-eyebrow,
+    .contact .cta-action-label {
+        font-size: 1.6rem;
     }
 }
